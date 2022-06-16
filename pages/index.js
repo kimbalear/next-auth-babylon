@@ -12,12 +12,12 @@ function HomePage({ session }) {
       <Image src='/images/logo.png' width={56} height={56} />
       {
         session ? (
-          <div className={styles.container}>
-            <h1>{session.user.name}</h1>
-            <h4>{session.user.email}</h4>
+          <div>
+            <h1 className={styles.title}>{session.user.name}</h1>
+            <h4 className={styles.text}>{session.user.email}</h4>
             <img src={session.user.image} />
             <Link href='/ninjas'>
-              <a>See Ninja Listing</a>
+              <a className={styles.btn}>See Listing</a>
             </Link>
           </div>
         ) : (

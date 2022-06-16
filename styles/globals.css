@@ -41,12 +41,18 @@ footer {
 
 html,
 body {
-  width: 100vw;
-  height: 100vh;
   font-family: "Roboto", sans-serif;
-  overflow: hidden;
   background: color #f2f2f2;
   color: #333;
+}
+
+.not-found {
+  text-align: center;
+  line-height: 3em;
+}
+.not-found a {
+  color: #4979ff;
+  text-decoration: underline;
 }
 
 /*# sourceMappingURL=globals.css.map */
