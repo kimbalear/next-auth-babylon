@@ -4,6 +4,7 @@ import Footer from '../components/footer'
 import Link from 'next/link'
 import { getSession, signOut } from 'next-auth/react'
 import Image from 'next/image'
+import styles from '../styles/Home.module.css'
 
 function HomePage({ session }) {
   return (
@@ -11,7 +12,7 @@ function HomePage({ session }) {
       <Image src='/images/logo.png' width={56} height={56} />
       {
         session ? (
-          <div>
+          <div className={styles.container}>
             <h1>{session.user.name}</h1>
             <h4>{session.user.email}</h4>
             <img src={session.user.image} />
