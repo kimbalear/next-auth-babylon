@@ -1,24 +1,32 @@
 import Head from 'next/head'
 import NavBar from '../components/navBar'
 import Footer from '../components/footer'
-
+import Link from 'next/link'
 import { getSession, signOut } from 'next-auth/react'
 import Image from 'next/image'
 
 function HomePage({ session }) {
   return (
     <div>
-      <NavBar/>
-      <Image src='/images/logo.png' width={56} height={56}/>
+      <Image src='/images/logo.png' width={56} height={56} />
       {
         session ? (
           <div>
             <h1>{session.user.name}</h1>
             <h4>{session.user.email}</h4>
             <img src={session.user.image} />
+            <Link href='/ninjas'>
+              <a>See Ninja Listing</a>
+            </Link>
           </div>
         ) : (
-          <p>Skeleton</p>
+          <div>
+            <p>Skeleton</p>
+            <Link href='/ninjas'>
+              <a>See Ninja Listing</a>
+            </Link>
+          </div>
+
         )
       }
       <button onClick={() => signOut()}>
