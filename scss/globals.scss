@@ -2,7 +2,8 @@
 
 @import 'layouts/layout';
 @import 'components/navbar',
-'components/footer';
+'components/footer',
+'components/list';
 
 * {
     box-sizing: border-box;
@@ -16,7 +17,7 @@ body {
     //height: 100vh;
     font-family: 'Roboto', sans-serif;
     //overflow: hidden;
-    background: color #f2f2f2;
+    background-color: #f2f2f2;
     color: #333;
 }
 

@@ -3,13 +3,15 @@ import NavBar from '../components/navBar'
 import Footer from '../components/footer'
 import Link from 'next/link'
 import { getSession, signOut } from 'next-auth/react'
-import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
 function HomePage({ session }) {
   return (
-    <div>
-      <Image src='/images/logo.png' width={56} height={56} />
+    <>
+      <Head>
+        <title>Babylon | Home</title>
+        <meta name='keywords' content='demo'/>
+      </Head>
       {
         session ? (
           <div>
@@ -33,7 +35,7 @@ function HomePage({ session }) {
       <button onClick={() => signOut()}>
         Logout
       </button>
-    </div>
+    </>
   )
 }
 export const getServerSideProps = async (context) => {

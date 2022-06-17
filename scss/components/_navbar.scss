@@ -2,14 +2,17 @@ nav {
     margin: 10px auto 80px;
     padding: 10px 0;
     display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
+    justify-content: end;
+    align-items: center;
     border-bottom: 1px solid #ddd;
+    background-color: aquamarine;
+
+    .logo{
+        margin-left: auto;
+    }
 
     a {
         margin-left: 12px;
-    }
-    .logo{
-        margin-left: auto;
+        background-color: bisque;
     }
 }
