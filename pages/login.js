@@ -13,6 +13,7 @@ function LoginPage() {
 
     return (
         <div>
+            <h1>Login</h1>
             <button onClick={() => signIn('github')}>
                 Signin with github
             </button>

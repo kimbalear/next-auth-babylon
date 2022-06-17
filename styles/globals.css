@@ -2,27 +2,59 @@
 .content {
   max-width: 960px;
   margin: 0 auto;
+  background-color: #f2f2f2;
 }
 .content a {
   color: #333;
   text-decoration: none;
 }
 
-nav {
-  margin: 10px auto 80px;
+.header {
+  border-bottom: 1px solid #ddd;
+  display: grid;
+  grid-template-columns: 52px auto max-content 50px;
+  grid-template-rows: min-content;
+  gap: 0 8px;
+  grid-template-areas: "logo navs cta lng";
+  background-color: #fff;
+}
+.header .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: logo;
+}
+.header .logo:hover {
+  cursor: pointer;
+}
+.header .navs {
+  margin: 10px 8px;
   padding: 10px 0;
   display: flex;
   justify-content: end;
   align-items: center;
-  border-bottom: 1px solid #ddd;
-  background-color: aquamarine;
+  grid-area: navs;
 }
-nav .logo {
-  margin-left: auto;
-}
-nav a {
+.header .navs a {
   margin-left: 12px;
-  background-color: bisque;
+}
+.header .cta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: cta;
+}
+.header .cta:hover {
+  cursor: pointer;
+}
+.header .lng {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: lng;
+}
+.header .lng:hover {
+  cursor: pointer;
 }
 
 footer {
@@ -47,6 +79,59 @@ footer {
   cursor: pointer;
 }
 
+button {
+  padding: 0.6em 2em;
+  border: none;
+  outline: none;
+  color: white;
+  background-color: #F06D24;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 20px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+button:before {
+  content: "";
+  background: linear-gradient(45deg, #F06D24, #8FC7C7, #FCF062, #00AA67);
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button-85 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 20px;
+}
+button:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #F06D24;
+  left: 0;
+  top: 0;
+  border-radius: 20px;
+}
+
+@keyframes button {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
 * {
   box-sizing: border-box;
   padding: 0;
@@ -56,7 +141,7 @@ footer {
 html,
 body {
   font-family: "Roboto", sans-serif;
-  background-color: #f2f2f2;
+  background-color: #FFF;
   color: #333;
 }
 

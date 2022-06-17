@@ -1,6 +1,4 @@
 import Head from 'next/head'
-import NavBar from '../components/navBar'
-import Footer from '../components/footer'
 import Link from 'next/link'
 import { getSession, signOut } from 'next-auth/react'
 import styles from '../styles/Home.module.css'
@@ -10,7 +8,7 @@ function HomePage({ session }) {
     <>
       <Head>
         <title>Babylon | Home</title>
-        <meta name='keywords' content='demo'/>
+        <meta name='keywords' content='demo' />
       </Head>
       {
         session ? (
@@ -25,7 +23,7 @@ function HomePage({ session }) {
         ) : (
           <div>
             <p>Skeleton</p>
-            <Link href='/ninjas'>
+            <Link href='/sub'>
               <a>See Ninja Listing</a>
             </Link>
           </div>

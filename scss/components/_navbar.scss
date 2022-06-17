@@ -1,18 +1,57 @@
-nav {
-    margin: 10px auto 80px;
-    padding: 10px 0;
-    display: flex;
-    justify-content: end;
-    align-items: center;
+.header {
+    //padding: 8px 8px 0;
     border-bottom: 1px solid #ddd;
-    background-color: aquamarine;
+    display: grid;
+    grid-template-columns: 52px auto max-content 50px;
+    grid-template-rows: min-content;
+    gap: 0 8px;
+    grid-template-areas: "logo navs cta lng";
+    background-color: #fff;
 
-    .logo{
-        margin-left: auto;
+    .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        grid-area: logo;
+
+        &:hover {
+            cursor: pointer;
+        }
     }
 
-    a {
-        margin-left: 12px;
-        background-color: bisque;
+    .navs {
+        margin: 10px 8px;
+        padding: 10px 0;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        grid-area: navs;
+
+        a {
+            margin-left: 12px;
+        }
+    }
+
+    .cta {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        grid-area: cta;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    .lng {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        grid-area: lng;
+
+        &:hover {
+            cursor: pointer;
+        }
     }
 }

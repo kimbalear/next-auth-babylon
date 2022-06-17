@@ -3,11 +3,13 @@ import Layout from '../components/layout'
 import '../styles/globals.css'
 
 function MyApp({ Component, pageProps }) {
-  return <Layout>
-    <SessionProvider>
+  return (
+  <SessionProvider>
+    <Layout>
       <Component {...pageProps} />
-    </SessionProvider>
-  </Layout>
+    </Layout>
+  </SessionProvider>
+  )
 }
 
 export default MyApp
