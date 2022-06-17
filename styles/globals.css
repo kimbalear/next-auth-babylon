@@ -36,7 +36,13 @@
   grid-area: navs;
 }
 .header .navs a {
+  color: #7c7c7c;
   margin-left: 12px;
+}
+.header .navs a:hover {
+  color: #F06D24;
+  text-decoration: underline;
+  text-underline-offset: 8px;
 }
 .header .cta {
   display: flex;
@@ -44,17 +50,26 @@
   align-items: center;
   grid-area: cta;
 }
-.header .cta:hover {
+.header .cta img {
+  border-radius: 50%;
+  border: 2px solid #ddd;
+}
+.header .cta img:hover {
   cursor: pointer;
+  border: 2px solid #F06D24;
 }
 .header .lng {
   display: flex;
   justify-content: center;
   align-items: center;
+  color: #7c7c7c;
   grid-area: lng;
 }
 .header .lng:hover {
   cursor: pointer;
+  color: #F06D24;
+  text-decoration: underline;
+  text-underline-offset: 8px;
 }
 
 footer {
@@ -132,6 +147,35 @@ button:after {
     background-position: 0 0;
   }
 }
+.card_user {
+  margin: 8px;
+  float: right;
+  width: 200px;
+  height: auto;
+  padding: 8px;
+  background-color: #FFF;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+.card_user .avatar {
+  width: 100%;
+  height: auto;
+  padding: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card_user .avatar img {
+  margin: 0 auto;
+  border-radius: 50%;
+  border: 4px solid #ddd;
+}
+.card_user .contents {
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;

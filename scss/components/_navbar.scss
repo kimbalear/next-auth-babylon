@@ -29,7 +29,14 @@
         grid-area: navs;
 
         a {
+            color: rgb(124, 124, 124);
             margin-left: 12px;
+
+            &:hover{
+                color: #F06D24;
+                text-decoration: underline;
+                text-underline-offset: 8px;
+            }
         }
     }
 
@@ -39,8 +46,14 @@
         align-items: center;
         grid-area: cta;
 
-        &:hover {
-            cursor: pointer;
+        img{
+            border-radius: 50%;
+            border: 2px solid #ddd;
+
+            &:hover {
+                cursor: pointer;
+                border: 2px solid #F06D24;
+            }
         }
     }
 
@@ -48,10 +61,14 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        color: rgb(124, 124, 124);
         grid-area: lng;
 
-        &:hover {
+        &:hover{
             cursor: pointer;
+            color: #F06D24;
+            text-decoration: underline;
+            text-underline-offset: 8px;
         }
     }
 }

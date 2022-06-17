@@ -4,6 +4,7 @@ import { getSession, signOut } from 'next-auth/react'
 import styles from '../styles/Home.module.css'
 
 function HomePage({ session }) {
+  console.log(session.user)
   return (
     <>
       <Head>
@@ -13,12 +14,7 @@ function HomePage({ session }) {
       {
         session ? (
           <div>
-            <h1 className={styles.title}>{session.user.name}</h1>
-            <h4 className={styles.text}>{session.user.email}</h4>
-            <img src={session.user.image} />
-            <Link href='/sub'>
-              <a className={styles.btn}>See Listing</a>
-            </Link>
+            Patient's data
           </div>
         ) : (
           <div>
