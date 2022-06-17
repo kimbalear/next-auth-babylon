@@ -18,7 +18,7 @@ function HomePage({ session }) {
             <h1 className={styles.title}>{session.user.name}</h1>
             <h4 className={styles.text}>{session.user.email}</h4>
             <img src={session.user.image} />
-            <Link href='/ninjas'>
+            <Link href='/sub'>
               <a className={styles.btn}>See Listing</a>
             </Link>
           </div>

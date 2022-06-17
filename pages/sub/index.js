@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 export const getStaticProps = async () => {
     const res = await fetch('https://jsonplaceholder.typicode.com/users')
     const data = await res.json()
@@ -7,16 +9,16 @@ export const getStaticProps = async () => {
     }
 }
 
-const DemoList = ({demo}) => {
+const DemoList = ({ demo }) => {
     return (
         <div>
             <h1>All Demo</h1>
             {demo.map(demo => (
-                <div key={demo.id}>
+                <Link href={'/sub/' + demo.id} key={demo.id}>
                     <a className='single'>
-                        <h3>{demo.name}</h3>
+                        <h4>{demo.name}</h4>
                     </a>
-                </div>
+                </Link>
             ))}
         </div>
     );
