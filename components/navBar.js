@@ -1,13 +1,14 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { useSession, signIn } from 'next-auth/react';
+import { useSession, signIn, signOut } from 'next-auth/react';
 import styles from '../styles/Home.module.css'
 import { useState } from "react";
 
 const Navbar = () => {
     const { data: session, status } = useSession()
 
-    const [toggleViewMode, setToggleViewMode] = useState(false);
+    const [toggleAvatar, settoggleAvatar] = useState(false)
+    const [toggleViewMode, settoggleViewMode] = useState(false)
 
     return (
         <>
@@ -24,7 +25,7 @@ const Navbar = () => {
                 <div className='cta'>
                     {
                         session ? (
-                            <img src={session.user.image} width={36} height={36} onClick={() => setToggleViewMode(!toggleViewMode)} />
+                            <img src={session.user.image} width={36} height={36} onClick={() => settoggleAvatar(!toggleAvatar)} />
                         ) : (
                             <button onClick={() => signIn('github')}>
                                 Sign In/Up
@@ -32,35 +33,42 @@ const Navbar = () => {
                         )
                     }
                 </div>
-                <div className='lng'><small>En | Vn</small></div>
-            </div>
-            <div className='card_user' >
-                {
-                    session ? (
-                        <>
-                            {toggleViewMode ? (
-                                <>
-                                    <div className='avatar'>
-                                        <img src={session.user.image} width={100} height={100} />
-                                    </div>
-                                    <div className='contents'>
-                                        <h4>{session.user.name}</h4>
-                                        <p>{session.user.email}</p>
-
-                                        <Link href='/sub'>
-                                            <a className={styles.btn}>See Listing</a>
-                                        </Link>
-                                    </div>
-                                </>
-                            ) : ('Search')}
-                        </>
+                <div className='lng' onClick={() => settoggleViewMode(!toggleViewMode)}>
+                    {toggleViewMode ? (
+                        <Image src='/flag_en.png' width={24} height={16} />
                     ) : (
-                        <button onClick={() => signIn('github')}>
-                            Sign In/Up
-                        </button>
-                    )
-                }
+                        <Image src='/flag_vn.png' width={24} height={16} />
+                    )}
+                </div>
             </div>
+
+            {
+                session ? (
+                    <>
+                        {toggleAvatar ? (
+                            <div className='card_user' >
+                                <div className='avatar'>
+                                    <img src={session.user.image} width={100} height={100} />
+                                </div>
+                                <div className='contents'>
+                                    <h4>{session.user.name}</h4>
+                                    <p>{session.user.email}</p>
+
+                                    {/*<Link href='/sub'>
+                                            <a className={styles.btn}>See Listing</a>
+                                    </Link>*/}
+
+                                    <button onClick={() => signOut()}>
+                                        Logout
+                                    </button>
+                                </div>
+                            </div>
+                        ) : (<></>)}
+                    </>
+                ) : (
+                    <></>
+                )
+            }
         </>
     );
 }

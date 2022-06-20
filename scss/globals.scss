@@ -1,11 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 @import 'layouts/layout';
 @import 'components/navbar',
 'components/footer',
 'components/list',
 'components/btns',
-'components/cards';
+'components/cards',
+'components/i-fields';
 
 * {
     box-sizing: border-box;
@@ -17,7 +18,7 @@ html,
 body {
     //width: 100vw;
     //height: 100vh;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     //overflow: hidden;
     background-color: #FFF;
     color: #333;
@@ -31,4 +32,37 @@ body {
         color: #4979ff;
         text-decoration: underline;
     }
+}
+
+.twocols {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: min-content;
+    gap: 8px 8px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "title title"
+        "lft rgt";
+        padding: 16px;
+        background-color: #FEFEFE;
+
+
+    .title {
+        grid-area: title;
+    }
+
+    .lft {
+        grid-area: lft;
+    }
+
+    .rgt {
+        grid-area: rgt;
+    }
+
+}
+
+.form {
+    background-color: green;
+    max-width: 800px;
+    margin: 0 auto;
 }
