@@ -9,6 +9,7 @@ const Navbar = () => {
 
     const [toggleAvatar, settoggleAvatar] = useState(false)
     const [toggleViewMode, settoggleViewMode] = useState(false)
+    const [toggleMenu, settoggleMenu] = useState(false)
 
     return (
         <>
@@ -21,6 +22,7 @@ const Navbar = () => {
                     <Link href="/provider_loc"><a>Provider Locator</a></Link>
                     <Link href="/symptom_ck"><a>Symptom Checker</a></Link>
                     <Link href="/more"><a>More</a></Link>
+                    
                 </nav>
                 <div className='cta'>
                     {
@@ -40,6 +42,15 @@ const Navbar = () => {
                         <Image src='/flag_vn.png' width={24} height={16} />
                     )}
                 </div>
+                <div className='menu' onClick={() => settoggleMenu(!toggleMenu)}>
+                {toggleMenu ? (
+                        <Image src='/close.png' width={24} height={24}/>
+                    ) : (
+                        <Image src='/menu.png' width={24} height={24}/>
+                    )}
+                    
+                </div>
+                
             </div>
 
             {

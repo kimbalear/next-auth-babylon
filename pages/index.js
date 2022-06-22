@@ -2,6 +2,8 @@ import Head from 'next/head'
 import Link from 'next/link'
 import { getSession, signOut } from 'next-auth/react'
 import Image from 'next/image'
+import Slider from '../components/slider'
+
 
 function HomePage({ session }) {
   console.log(session)
@@ -25,6 +27,7 @@ function HomePage({ session }) {
           </>
         )
       }
+      <Slider />
       <div className='twocols'>
         <div className='title'>
           <h3>Services</h3>
@@ -47,50 +50,24 @@ function HomePage({ session }) {
             <p>We'll help you find a clinic nearby</p>
           </div>
         </div>
-      </div>
-      <div className='twocols'>
-        <div className='title'>
-          <h3>Services</h3>
-        </div>
-        <div className='lft'>
-          <div className='card1'>
-            <div className='avatar'>
-              <Image src='/sympton_checker.png' width={48} height={48} />
-            </div>
-            <h4>Sympton Checker</h4>
-            <p>Contact us to know about your disease</p>
+        <div className='des'>
+          <div className='title'>
+            <h2>We’re employee benefit at 7500+ hospital</h2>
           </div>
-        </div>
-        <div className='rgt'>
-          <div className='card2'>
-            <div className='avatar'>
-              <Image src='/provider_locator.png' width={48} height={48} />
-            </div>
-            <h4>Provider Locator</h4>
-            <p>We'll help you find a clinic nearby</p>
+          <div className='col1'>
+            <p className='l1'>7,777</p>
+            <p className='l2'>User</p>
+            <p className='l3'>Highly Verified</p>
           </div>
-        </div>
-      </div>
-      <div className='twocols'>
-        <div className='title'>
-          <h3>Services</h3>
-        </div>
-        <div className='lft'>
-          <div className='card1'>
-            <div className='avatar'>
-              <Image src='/sympton_checker.png' width={48} height={48} />
-            </div>
-            <h4>Sympton Checker</h4>
-            <p>Contact us to know about your disease</p>
+          <div className='col2'>
+            <p className='l1'>10,000</p>
+            <p className='l2'>Clinics</p>
+            <p className='l3'>Clinics Highly Verified</p>
           </div>
-        </div>
-        <div className='rgt'>
-          <div className='card2'>
-            <div className='avatar'>
-              <Image src='/provider_locator.png' width={48} height={48} />
-            </div>
-            <h4>Provider Locator</h4>
-            <p>We'll help you find a clinic nearby</p>
+          <div className='col3'>
+            <p className='l1'>100%</p>
+            <p className='l2'>Feedback</p>
+            <p className='l3'>Potential Customers</p>
           </div>
         </div>
       </div>

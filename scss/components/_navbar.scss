@@ -2,19 +2,20 @@
     padding: 0 8px;
     border-bottom: 1px solid #ddd;
     display: grid;
-    grid-template-columns: 52px auto max-content max-content;
-    grid-template-rows: min-content;
+    grid-template-columns: 52px auto max-content max-content 24px;
+    grid-template-rows: 52px;
     gap: 0 8px;
-    grid-template-areas: "logo navs cta lng";
+    grid-template-areas: "logo navs cta lng menu";
     background-color: #fff;
     position: sticky;
     top: 0;
+    z-index: 999;
+
 
     .logo {
         display: flex;
         justify-content: center;
         align-items: center;
-
         grid-area: logo;
 
         &:hover {
@@ -34,11 +35,15 @@
             color: rgb(124, 124, 124);
             margin-left: 12px;
 
-            &:hover{
+            &:hover {
                 color: #F06D24;
                 text-decoration: underline;
                 text-underline-offset: 8px;
             }
+        }
+
+        img {
+            float: right;
         }
     }
 
@@ -48,7 +53,7 @@
         align-items: center;
         grid-area: cta;
 
-        img{
+        img {
             border-radius: 50%;
             border: 2px solid #ddd;
 
@@ -67,11 +72,39 @@
         color: rgb(124, 124, 124);
         grid-area: lng;
 
-        &:hover{
+        &:hover {
             cursor: pointer;
             color: #F06D24;
             text-decoration: underline;
             text-underline-offset: 8px;
+        }
+    }
+
+    .menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        grid-area: menu;
+    }
+
+    @media only screen and (max-width: 700px) {
+        nav {
+            justify-content: flex-end;
+            align-items: center;
+
+            a {
+                display: none !important;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 701px) {
+    .header {
+        grid-template-columns: 52px auto max-content max-content;
+        grid-template-areas: "logo navs cta lng";
+        .menu {
+            display: none !important;
         }
     }
 }

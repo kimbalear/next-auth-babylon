@@ -24,7 +24,7 @@ function LoginPage() {
                 <img className='logo' src='/logo.png' width={36} height={36} />
                 <h1>You’re new here!</h1>
                 <h6>Sign up with your email and personal details to get started!</h6>
-                <div class="field_text_num_text_num">
+                <div class="field_text_num">
                     <label>Phone Number:</label>
                     <input type="number" required placeholder='Enter your phone number' />
                     <div className='helptext'>Invalid phone number</div>
