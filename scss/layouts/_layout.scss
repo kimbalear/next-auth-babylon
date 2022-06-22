@@ -1,38 +1,87 @@
 .content {
     height: 100%;
     background-color: #f2f2f2;
+
     a {
         color: #333;
         text-decoration: none;
     }
 }
 
-.login{
+.login {
     width: 100%;
-    height: calc(100vh - 39px);
-    max-width: 800px;
+    height: 100vh;
+    max-width: 600;
     margin: 0 auto;
     background-color: #FFF;
 
 
     .form {
         float: left;
-        padding: 8px;
+        padding: 16px;
         width: 50%;
+        height: 100vh;
+        background-color: #FFF;
 
-        .logo{
+        .logo {
             float: right;
         }
 
         h1 {
             margin-top: 10%;
         }
+
+        h6 {
+            margin: 16px 0 30px;
+        }
+
+        button {
+            width: 100%;
+            margin-bottom: 21px;
+            padding: 0.9em 2em;
+        }
+
+        .social_profile {
+            font-size: 16px;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .social_icons {
+            width: max-content;
+            height: 48px;
+            margin: 0 auto;
+            margin-bottom: 20px;
+
+
+            .icon_social{
+                float: left;
+                margin: 0 8px;
+
+                img {
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .have_account{
+            clear: both;
+            text-align: center;
+            span {
+                color: #20ADE4;
+                font-weight: 500;
+                cursor: pointer;
+            }
+        }
     }
-    
+
     .login_up {
         float: left;
         width: 50%;
+        height: 100%;
     }
+
     @media only screen and (max-width: 799px) {
         .login_up {
             display: none;

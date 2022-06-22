@@ -1,7 +1,7 @@
 .field {
     width: 100%;
     height: max-content;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
 
     label {
         font-size: 16;
@@ -40,11 +40,23 @@
     }
 
     .helptext {
-        font-size: 12;
+        font-size: 12px!important;
         font-weight: 500;
         width: 100%;
         font-size: 1em;
         margin-bottom: 12px;
         color: #D80000;
+    }
+
+    .cta {
+        font-size: 12px!important;
+        font-weight: 600;
+        font-size: 1em;
+        margin: 8px 12px 20px;
+        float: right;
+        
+        a{
+            color: #20ADE4!important;
+        }
     }
 }

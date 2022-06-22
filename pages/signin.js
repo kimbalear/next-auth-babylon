@@ -18,31 +18,28 @@ function LoginPage() {
     return (
         <div className='login'>
             <div className='login_up'>
-                <img src='/login_up.jpg' width={w_image} />
+                <img src='/signin.jpg' width={w_image} />
             </div>
             <div className='form'>
                 <img className='logo' src='/logo.png' width={36} height={36} />
-                <h1>You’re new here!</h1>
-                <h6>Sign up with your email and personal details to get started!</h6>
+                <h1>Wellcome back!</h1>
+                <h6>Get access to your Wishlist and Recommendations</h6>
                 <div class="field">
                     <label>Phone Number:</label>
                     <input type="number" required placeholder='Enter your phone number' />
                     <div className='helptext'>Invalid phone number</div>
                 </div>
                 <div class="field">
-                    <label>Your Name:</label>
-                    <input type="text" required placeholder='Enter Your Name' />
+                    <label>Email Address:</label>
+                    <input type="text" required placeholder='Enter email address' />
                 </div>
                 <div class="field">
-                    <label>Sex at birth:</label>
-                    <input type="text" required placeholder='Enter Your sex' />
-                </div>
-                <div class="field">
-                    <label>Birth Date:</label>
-                    <input type="date" required placeholder='Enter Your birth date' />
+                    <label>Password:</label>
+                    <input type="password" required placeholder='Enter Your password' />
+                    <div className='cta'><Link href="/recover">Forgot Password?</Link></div>
                 </div>
                 <button onClick={() => signIn('github')}>
-                    Sign Up
+                    Sign In
                 </button>
                 <div className='social_profile'>Or with Social Profile</div>
                 <div className='social_icons'>
@@ -52,11 +49,8 @@ function LoginPage() {
                     <div className='icon_social'>
                         <Link href="/"><Image src='/google.png' width={48} height={48} /></Link>
                     </div>
-                    <div className='icon_social'>
-                        <Image src='/github.png' width={48} height={48}  onClick={() => signIn('github')}/>
-                    </div>
                 </div>
-                <div className='have_account'>Already have an account?<Link href="/signin"><span>Sign In</span></Link></div>
+                <div className='have_account'>Dont' have an account? <Link href="/login"><span>Sign Up</span></Link></div>
             </div>
         </div>
 

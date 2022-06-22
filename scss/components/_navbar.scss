@@ -7,6 +7,8 @@
     gap: 0 8px;
     grid-template-areas: "logo navs cta lng";
     background-color: #fff;
+    position: sticky;
+    top: 0;
 
     .logo {
         display: flex;
