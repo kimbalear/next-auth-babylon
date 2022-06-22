@@ -24,7 +24,7 @@ function LoginPage() {
                 <img className='logo' src='/logo.png' width={36} height={36} />
                 <h1>Forgot your password</h1>
                 <h6>We’ll help you reset it and get back on track</h6>
-                <div class="field">
+                <div class="field_text_num">
                     <label>Email Address:</label>
                     <input type="text" required placeholder='Enter email address' />
                 </div>
