@@ -14,19 +14,6 @@ function HomePage({ session }) {
         <title>Babylon | Home</title>
         <meta name='keywords' content='demo' />
       </Head>
-      {
-        session ? (
-          <div className='card_session'>
-            <p><b>Welcome {session.user.name}</b></p><br />
-            <p><b>mail:</b> {session.user.email}</p>
-            <p><b>Phone:</b> ### ### ###</p>
-            <p><b>Session expires</b> {session.expires}</p>
-          </div>
-        ) : (
-          <>
-          </>
-        )
-      }
       <Slider />
       <div className='twocols'>
         <div className='title'>
@@ -71,6 +58,19 @@ function HomePage({ session }) {
           </div>
         </div>
       </div>
+      {
+        session ? (
+          <div className='card_session'>
+            <p><b>Welcome {session.user.name}</b></p><br />
+            <p><b>mail:</b> {session.user.email}</p>
+            <p><b>Phone:</b> ### ### ###</p>
+            <p><b>Session expires</b> {session.expires}</p>
+          </div>
+        ) : (
+          <>
+          </>
+        )
+      }
     </>
   )
 }

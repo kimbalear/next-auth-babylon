@@ -256,7 +256,7 @@ button:after {
   }
 }
 .card_user {
-  position: absolute;
+  position: fixed;
   right: 0;
   margin: 8px;
   width: 200px;
@@ -449,7 +449,6 @@ button:after {
   width: 100%;
   height: 50vh;
   margin-right: 50px;
-  border-radius: 10px;
   background: #eee;
   transform-origin: center center;
   transform: scale(1);
@@ -566,7 +565,7 @@ body {
 }
 .twocols .des .col2 .l1 {
   color: #EF6C23;
-  font-size: clamp(14px, 10vw, 28px);
+  font-size: 5vw;
   font-weight: 600;
 }
 .twocols .des .col2 .l2 {
@@ -588,7 +587,7 @@ body {
 }
 .twocols .des .col3 .l1 {
   color: #EF6C23;
-  font-size: clamp(14px, 10vw, 28px);
+  font-size: 5vw;
   font-weight: 600;
 }
 .twocols .des .col3 .l2 {

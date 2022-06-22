@@ -22,16 +22,22 @@ const Navbar = () => {
                     <Link href="/provider_loc"><a>Provider Locator</a></Link>
                     <Link href="/symptom_ck"><a>Symptom Checker</a></Link>
                     <Link href="/more"><a>More</a></Link>
-                    
+
                 </nav>
                 <div className='cta'>
                     {
                         session ? (
                             <img src={session.user.image} width={36} height={36} onClick={() => settoggleAvatar(!toggleAvatar)} />
                         ) : (
-                            <button onClick={() => signIn('github')}>
+                            <>{/*<button onClick={() => signIn('github')}>
                                 Sign In/Up
-                            </button>
+                            </button> */}
+                                <Link href="/login">
+                                    <button>
+                                        Sign In/Up
+                                    </button>
+                                </Link>
+                            </>
                         )
                     }
                 </div>
@@ -43,14 +49,14 @@ const Navbar = () => {
                     )}
                 </div>
                 <div className='menu' onClick={() => settoggleMenu(!toggleMenu)}>
-                {toggleMenu ? (
-                        <Image src='/close.png' width={24} height={24}/>
+                    {toggleMenu ? (
+                        <Image src='/close.png' width={24} height={24} />
                     ) : (
-                        <Image src='/menu.png' width={24} height={24}/>
+                        <Image src='/menu.png' width={24} height={24} />
                     )}
-                    
+
                 </div>
-                
+
             </div>
 
             {
