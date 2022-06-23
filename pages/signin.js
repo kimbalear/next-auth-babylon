@@ -24,16 +24,16 @@ function LoginPage() {
                 <img className='logo' src='/logo.png' width={36} height={36} />
                 <h1>Wellcome back!</h1>
                 <h6>Get access to your Wishlist and Recommendations</h6>
-                <div class="field_text_num">
+                <div className="field_text_num">
                     <label>Phone Number:</label>
                     <input type="number" required placeholder='Enter your phone number' />
                     <div className='helptext'>Invalid phone number</div>
                 </div>
-                <div class="field_text_num">
+                <div className="field_text_num">
                     <label>Email Address:</label>
                     <input type="text" required placeholder='Enter email address' />
                 </div>
-                <div class="field_text_num">
+                <div className="field_text_num">
                     <label>Password:</label>
                     <input type="password" required placeholder='Enter Your password' />
                     <div className='cta'><Link href="/recover">Forgot Password?</Link></div>
