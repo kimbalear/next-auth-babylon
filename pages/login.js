@@ -27,7 +27,7 @@ function LoginPage() {
                 <div className="field_text_num">
                     <label>Phone Number:</label>
                     <input type="number" required placeholder='Enter your phone number' />
-                    <div className='helptext'>Invalid phone number</div>
+                    <div className='helptext'><p>Invalid phone number</p></div>
                 </div>
                 <div className="field_text_num">
                     <label>Your Name:</label>
@@ -44,7 +44,7 @@ function LoginPage() {
                 <button onClick={() => signIn('github')}>
                     Sign Up
                 </button>
-                <div className='social_profile'>Or with Social Profile</div>
+                <div className='social_profile'><p>Or with Social Profile</p></div>
                 <div className='social_icons'>
                     <div className='icon_social'>
                         <Image src='/facebook.png' width={48} height={48} />
@@ -56,7 +56,7 @@ function LoginPage() {
                         <Image src='/github.png' width={48} height={48}  onClick={() => signIn('github')}/>
                     </div>
                 </div>
-                <div className='have_account'>Already have an account?<Link href="/signin"><span>Sign In</span></Link></div>
+                <div className='have_account'><p>Already have an account? </p><Link href="/signin"><span>Sign In</span></Link></div>
             </div>
         </div>
 

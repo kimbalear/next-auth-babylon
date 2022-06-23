@@ -31,7 +31,7 @@ function LoginPage() {
                 <button onClick={() => signIn('github')}>
                     Sign In
                 </button>
-                <div className='have_account'><span onClick={() => router.back()}>Back</span></div>
+                <div className='have_account'><span onClick={() => router.back()}><p>Back</p></span></div>
             </div>
         </div>
 
