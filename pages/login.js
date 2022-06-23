@@ -56,7 +56,7 @@ function LoginPage() {
                         <Image src='/github.png' width={48} height={48}  onClick={() => signIn('github')}/>
                     </div>
                 </div>
-                <div className='have_account'>Already have an account?<Link href="/signin"><span>Sign In</span></Link></div>
+                <div className='have_account'>Already have an account? <Link href="/signin"><span>Sign In</span></Link></div>
             </div>
         </div>
 
