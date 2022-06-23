@@ -8,11 +8,11 @@ const Slider = () => {
         <>
             <div className="slider">
                 <div className="slides">
-                    <div id="slide-1"><p>Image 1</p></div>
-                    <div id="slide-2"><p>Image 2</p></div>
-                    <div id="slide-3"><p>Image 3</p></div>
-                    <div id="slide-4"><p>Image 4</p></div>
-                    <div id="slide-5"><p>Image 5</p></div>
+                    <div id="slide-1">Image 1</div>
+                    <div id="slide-2">Image 2</div>
+                    <div id="slide-3">Image 3</div>
+                    <div id="slide-4">Image 4</div>
+                    <div id="slide-5">Image 5</div>
                 </div>
             </div>
         </>
